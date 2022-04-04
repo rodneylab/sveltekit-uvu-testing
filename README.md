@@ -1,4 +1,4 @@
-<img src="./images/rodneylab-github-svelte-each.png" alt="Rodney Lab sveltekit-iconify Github banner">
+<img src="./images/rodneylab-github-sveltekit-uvu-testing.png" alt="Rodney Lab sveltekit-uvu-testing Github banner">
 
 <p align="center">
   <a aria-label="Open Rodney Lab site" href="https://rodneylab.com" rel="nofollow noopener noreferrer">
@@ -6,22 +6,22 @@
   </a>
 </p>
 <h1 align="center">
-  Svelte #each
+  SvelteKit uvu Testing
 </h1>
 
-# svelte-each
+# sveltekit-uvu-testing
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/svelte-each)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/sveltekit-uvu-testing)
 
-Demo code: colour palette app which helps explain Svelte each blocks as well as const directives, destructuring within each blocks and style directives. The code accompanies the <a aria-label="Open Rodney Lab video post on Svelte Each blocks" href="https://rodneylab.com/using-svelte-each-blocks/">video post on using each blocks in Svelte</a>. If you have any questions, please drop a comment at the bottom of that page.
+Demo code: colour palette app which helps explain Svelte each blocks as well as const directives, destructuring within each blocks and style directives. The code accompanies the <a aria-label="Open Rodney Lab video post on Svelte Each blocks" href="https://rodneylab.com/sveltekit-uvu-testing/">post on SvelteKi uvu unit testing</a>. If you have any questions, please drop a comment at the bottom of that page.
 
 ## Building and previewing the site
 
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-git clone https://github.com/rodneylab/svelte-each.git
-cd svelte-each
+git clone https://github.com/rodneylab/sveltekit-uvu-testing.git
+cd sveltekit-uvu-testing
 pnpm install # or npm install
 pnpm run dev
 ```

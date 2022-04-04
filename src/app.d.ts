@@ -8,3 +8,14 @@ declare namespace App {
   // interface Session {}
   // interface Stuff {}
 }
+
+declare global {
+  interface ImportMeta {
+    env: {
+      DEV: boolean;
+      PROD: boolean;
+      PUBLIC_BUYMEACOFFEE_PAGE: string;
+      SSR: boolean;
+    };
+  }
+}
