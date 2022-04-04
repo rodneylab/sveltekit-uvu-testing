@@ -1,5 +1,5 @@
 {
-  "name": "svelte-each",
+  "name": "svelte-uvu-testing",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev --port 3030",

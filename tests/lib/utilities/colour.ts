@@ -1,9 +1,8 @@
+import type { RGBColour } from '$lib/types/colour';
+import { textColourClass } from '$lib/utilities/colour';
+import { reset, setup } from '$tests/setup/env';
 import { test } from 'uvu';
 import assert from 'uvu/assert';
-import type { RGBColour } from '$lib/types/colour';
-
-import { reset, setup } from '$tests/setup/env';
-import { textColourClass } from '$lib/utilities/colour';
 
 test.before(setup);
 test.before.each(reset);

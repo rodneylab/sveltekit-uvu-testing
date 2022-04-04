@@ -13,7 +13,7 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/sveltekit-uvu-testing)
 
-Demo code: colour palette app which helps explain Svelte each blocks as well as const directives, destructuring within each blocks and style directives. The code accompanies the <a aria-label="Open Rodney Lab video post on Svelte Each blocks" href="https://rodneylab.com/sveltekit-uvu-testing/">post on SvelteKi uvu unit testing</a>. If you have any questions, please drop a comment at the bottom of that page.
+Demo code: colour palette app which helps explain Svelte each blocks as well as const directives, destructuring within each blocks and style directives. The code accompanies the <a aria-label="Open Rodney Lab video post on Svelte Each blocks" href="https://rodneylab.com/sveltekit-uvu-testing/">post on SvelteKit uvu unit testing</a>. If you have any questions, please drop a comment at the bottom of that page.
 
 ## Building and previewing the site
 

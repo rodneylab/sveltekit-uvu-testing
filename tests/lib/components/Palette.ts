@@ -1,8 +1,8 @@
+import Palette from '$lib/components/Palette.svelte';
+import { render, reset, setup } from '$tests/setup/env';
 import { render as customRender } from '@testing-library/svelte';
 import { test } from 'uvu';
 import assert from 'uvu/assert';
-import Palette from '$lib/components/Palette.svelte';
-import { render, reset, setup } from '$tests/setup/env';
 
 const colours = [
   { red: 0, green: 5, blue: 1 },

@@ -14,7 +14,7 @@ const processSync =
       const svelteConfig = getSvelteConfig(rootMode, filename);
       const preprocessor = require.resolve('./preprocess.js');
       processed = execSync(
-        // `node -r dotenv/config --unhandled-rejections=strict --abort-on-uncaught-exception "${preprocessor}"`,
+        // `node -r dotenv/config -r module-alias/register --unhandled-rejections=strict --abort-on-uncaught-exception "${preprocessor}"`,
         `node -r module-alias/register --unhandled-rejections=strict --abort-on-uncaught-exception "${preprocessor}"`,
         { env: { PATH: process.env.PATH, source, filename, svelteConfig } },
       ).toString();
