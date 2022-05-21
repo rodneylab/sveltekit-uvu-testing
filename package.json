@@ -1,6 +1,8 @@
 {
   "name": "svelte-uvu-testing",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "description": "SvelteKit uvu testing: how you can easily add fast component and utility function unit tests to your Svelte app using uvu with TypeScript.",
   "scripts": {
     "dev": "svelte-kit dev --port 3030",
     "build": "svelte-kit build",
