@@ -6,8 +6,8 @@ import type { RGBColour } from '$lib/types/colour';
  * @returns {number} - the calculated linear-light value
  */
 function linearLight(rgb8Bit: number): number {
-  const sRgb = rgb8Bit / 255;
-  return sRgb <= 0.03928 ? sRgb / 12.92 : Math.pow(sRgb + 0.055 / 1.055, 2.4);
+	const sRgb = rgb8Bit / 255;
+	return sRgb <= 0.03928 ? sRgb / 12.92 : Math.pow(sRgb + 0.055 / 1.055, 2.4);
 }
 
 /**
@@ -16,7 +16,7 @@ function linearLight(rgb8Bit: number): number {
  * @returns {string} - zero padded string
  */
 function decimalToHex(number: number): string {
-  return number.toString(16).padStart(2, '0');
+	return number.toString(16).padStart(2, '0');
 }
 
 /**
@@ -26,7 +26,7 @@ function decimalToHex(number: number): string {
  * @returns number - modulus of input number
  */
 export function modulus(number: number, divisor: number): number {
-  return number < 0 ? ((number % divisor) + divisor) % divisor : number % divisor;
+	return number < 0 ? ((number % divisor) + divisor) % divisor : number % divisor;
 }
 
 /**
@@ -35,7 +35,7 @@ export function modulus(number: number, divisor: number): number {
  * @returns {string}
  */
 export function rgbToHex({ red, green, blue }: RGBColour): string {
-  return `#${decimalToHex(red)}${decimalToHex(green)}${decimalToHex(blue)}`;
+	return `#${decimalToHex(red)}${decimalToHex(green)}${decimalToHex(blue)}`;
 }
 
 /**
@@ -44,31 +44,31 @@ export function rgbToHex({ red, green, blue }: RGBColour): string {
  * @returns {string} - CSS style hsl string
  */
 export function rgbToHsl({ red, green, blue }: RGBColour): string {
-  const r = red / 255;
-  const g = green / 255;
-  const b = blue / 255;
+	const r = red / 255;
+	const g = green / 255;
+	const b = blue / 255;
 
-  const cMax = Math.max(r, g, b);
-  const cMin = Math.min(r, g, b);
-  const chroma = cMax - cMin;
+	const cMax = Math.max(r, g, b);
+	const cMin = Math.min(r, g, b);
+	const chroma = cMax - cMin;
 
-  let hue = 0;
-  if (chroma > 1e-6) {
-    if (cMax === r) {
-      hue = 60 * modulus((g - b) / chroma, 6);
-    } else if (cMax === g) {
-      hue = 60 * ((b - r) / chroma + 2);
-    } else {
-      hue = 60 * ((r - g) / chroma + 4);
-    }
-  }
-  const lightness = (cMax + cMin) / 2;
-  const saturation =
-    lightness === 0 || lightness === 1 ? 0 : chroma / (1 - Math.abs(2 * lightness - 1));
+	let hue = 0;
+	if (chroma > 1e-6) {
+		if (cMax === r) {
+			hue = 60 * modulus((g - b) / chroma, 6);
+		} else if (cMax === g) {
+			hue = 60 * ((b - r) / chroma + 2);
+		} else {
+			hue = 60 * ((r - g) / chroma + 4);
+		}
+	}
+	const lightness = (cMax + cMin) / 2;
+	const saturation =
+		lightness === 0 || lightness === 1 ? 0 : chroma / (1 - Math.abs(2 * lightness - 1));
 
-  return `hsl(${hue.toFixed(0)}deg ${(100 * saturation).toFixed(0)}% ${(100 * lightness).toFixed(
-    0,
-  )}%)`;
+	return `hsl(${hue.toFixed(0)}deg ${(100 * saturation).toFixed(0)}% ${(100 * lightness).toFixed(
+		0,
+	)}%)`;
 }
 
 /**
@@ -77,9 +77,9 @@ export function rgbToHsl({ red, green, blue }: RGBColour): string {
  * @returns{'text-light'|'text-dark'} - returns a class
  */
 export function textColourClass({ red, green, blue }: RGBColour): 'text-light' | 'text-dark' {
-  const colourRelativeLuminance =
-    0.2126 * linearLight(red) + 0.7152 * linearLight(green) + 0.0722 * linearLight(blue);
-  const whiteContrastRatio = 1.05 / (colourRelativeLuminance + 0.05);
-  const blackContrastRatio = (colourRelativeLuminance + 0.05) / 0.05;
-  return blackContrastRatio > whiteContrastRatio ? 'text-dark' : 'text-light';
+	const colourRelativeLuminance =
+		0.2126 * linearLight(red) + 0.7152 * linearLight(green) + 0.0722 * linearLight(blue);
+	const whiteContrastRatio = 1.05 / (colourRelativeLuminance + 0.05);
+	const blackContrastRatio = (colourRelativeLuminance + 0.05) / 0.05;
+	return blackContrastRatio > whiteContrastRatio ? 'text-dark' : 'text-light';
 }

@@ -1,12 +1,12 @@
 export type ColourSystem = 'hex' | 'hsl' | 'rgb';
 
 export interface RGBColour {
-  red: number;
-  green: number;
-  blue: number;
+	red: number;
+	green: number;
+	blue: number;
 }
 
 export interface StoreColour {
-  name: string;
-  hex: string;
+	name: string;
+	hex: string;
 }
